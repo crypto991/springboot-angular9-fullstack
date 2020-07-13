@@ -1,0 +1,17 @@
+<div class="card my-5">
+    <h1 style="text-align: center">User Farms</h1>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let farm of farms">
+                    <td>{{ farm.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

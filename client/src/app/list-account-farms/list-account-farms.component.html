@@ -1,0 +1,23 @@
+<div class="card my-5">
+    <h1 style="text-align: center">Account Farms</h1>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th style="width: 70%">Name</th>
+                    <th style="width: 15%">Edit</th>
+                    <th style="width: 15%">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let farm of farms">
+                    <td>{{ farm.name }}</td>
+                    <td><button style="display: block;margin: auto;" (click)="editFarm(this.farm.farmId)" class="btn btn-warning">Edit</button></td>
+                    <td><button style="display: block;margin: auto;" (click)="deleteFarm(this.farm.farmId)" class="btn btn-danger">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button style="display: block;margin: auto;" (click)="addFarm()" class="btn btn-info">Add Farm</button>
+
+    </div>
+</div>

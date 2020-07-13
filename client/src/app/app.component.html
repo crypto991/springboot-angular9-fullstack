@@ -1,0 +1,35 @@
+<div id="app" class="container">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <ul class="navbar-nav mr-auto" routerLinkActive="active" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/list-user-accounts" class="nav-link" routerLink="list-user-accounts">User Accounts </a>
+      </li>
+    
+      <li class="nav-item">
+        <a href="/list-user-farms" class="nav-link" routerLink="list-user-farms">User Farms</a>
+      </li>
+      
+    </ul>
+    <ul class="navbar-nav mr-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Register</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

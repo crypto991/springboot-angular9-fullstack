@@ -1,0 +1,13 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label>Farm Name</label>
+          <input type="text" [(ngModel)]="farm.name"
+                 class="form-control" id="name" name="name">
+        </div>
+   
+        <button (click)="onSubmit()" type="submit" class="btn btn-success">Add</button>
+      </form>
+    </div>
+  </div>
