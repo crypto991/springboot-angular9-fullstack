@@ -1,7 +1,6 @@
 package com.djordje.ui.model.request;
 
 
-
 public class UserDetailRequestModel {
 
     private String firstName;

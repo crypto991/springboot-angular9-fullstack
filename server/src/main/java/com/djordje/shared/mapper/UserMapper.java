@@ -16,10 +16,8 @@ public interface UserMapper {
 
     UserDTO userDetailsToUserDto(UserDetailRequestModel userDetailRequestModel);
     UserRest userDtoToUserRest(UserDTO userDTO);
-    List<UserRest> userDtosListToUserRestList(List<UserDTO> userDTOList);
     UserDTO userEntityToUserDTO(UserEntity userEntity);
     UserEntity userDtoToUserEntity(UserDTO userDTO);
-    List<UserDTO> userEntityListToUserDTOList(List<UserEntity> userEntityList);
-    List<UserEntity> userDtoListToUserEntityList(List<UserDTO> userDTOList);
+
 
 }

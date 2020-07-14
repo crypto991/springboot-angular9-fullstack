@@ -20,7 +20,6 @@ public interface AccountMapper {
 
 
     AccountRest accountDTOToAccountRest(AccountDTO accountDTO);
-    AccountDTO accountRestToAccountDTO(AccountRest accountRest);
 
     Account accountDTOToAccount(AccountDTO accountDTO);
     AccountDTO acountToAccountDTO(Account account);
@@ -28,6 +27,5 @@ public interface AccountMapper {
     AccountDTO accountDetailsToAccountDTO(AccountDetailsRequestModel accountDetailsRequestModel);
 
     List<AccountRest> accountDTOListToAccountRestList(List<AccountDTO> accountDTOS);
-    List<AccountDTO> accountListToAccountDTO(List<Account> accounts);
 
 }

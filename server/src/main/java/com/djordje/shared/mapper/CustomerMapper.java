@@ -20,14 +20,7 @@ public interface CustomerMapper {
     CustomerMapper INSTANCE = Mappers.getMapper( CustomerMapper.class );
 
     CustomerDTO customerToCustomerDTO(Customer customer);
-    CustomerDTO customerDetailsToCustomerDTO(CustomerDetailsRequestModel customerDetailsRequestModel);
 
-    CustomerRest customerDTOToCustomerRest(CustomerDTO customerDTO);
-    CustomerDTO customerRestToCustomerDTO(CustomerRest customerRest);
-    Customer customerDTOToCustomer(CustomerDTO customerDTO);
-
-    List<CustomerRest> customerDTOListToCustomerRestList(List<CustomerDTO> customerDTOList);
-    List<CustomerDTO> customerListToCustomerDTOList(List<Customer> customers);
 
 
 }

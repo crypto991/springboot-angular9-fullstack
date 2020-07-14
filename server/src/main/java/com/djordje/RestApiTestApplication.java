@@ -34,8 +34,6 @@ public class RestApiTestApplication implements CommandLineRunner {
     private AccountRepository accountRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
-    @Autowired
-    private UserRepository userRepository;
 
 
     public static void main(String[] args) {

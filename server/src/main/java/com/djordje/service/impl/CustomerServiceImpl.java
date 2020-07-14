@@ -28,8 +28,6 @@ public class CustomerServiceImpl implements CustomerService {
             throw new AccountServiceException("Account doesnt exist!");
         }
 
-        CustomerDTO returnValue = CustomerMapper.INSTANCE.customerToCustomerDTO(account.getCustomer());
-
-        return returnValue;
+        return CustomerMapper.INSTANCE.customerToCustomerDTO(account.getCustomer());
     }
 }
