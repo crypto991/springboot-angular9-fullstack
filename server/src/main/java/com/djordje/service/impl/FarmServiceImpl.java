@@ -20,6 +20,7 @@ import com.djordje.shared.dto.UserDTO;
 import com.djordje.shared.mapper.FarmMapper;
 import com.djordje.shared.mapper.UserMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,20 +106,19 @@ public class FarmServiceImpl implements FarmService {
         account.addFarm(farm);
         farm.setAccount(account);
 
-        accountRepository.save(account);
-        farmRepository.save(farm);
-
         return FarmMapper.INSTANCE.farmToFarmDTO(farmRepository.save(farm));
     }
 
     @Override
     public List<FarmDTO> deleteFarmById(String accountId, String farmId) {
 
-        if (farmRepository.findByFarmId(farmId) == null) {
+        Farm byFarmId = farmRepository.findByFarmId(farmId);
+
+        if (byFarmId == null) {
             throw new FarmServiceException("Farm with " + farmId + "doesn't exist!");
         }
 
-        farmRepository.deleteByFarmId(farmId);
+        farmRepository.deleteById(byFarmId.getId());
 
         return FarmMapper.INSTANCE.farmListToFarmDTOList(accountRepository.findByAccountId(accountId).getFarms());
     }

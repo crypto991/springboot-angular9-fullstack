@@ -123,18 +123,18 @@ class AccountControllerTest {
         verify(accountService, times(1)).deleteAccountById(anyString(), anyString());
     }
 
-    @Test
-    void createAccount() {
-        when(accountService.addAccount(any(AccountDTO.class), anyString())).thenReturn(accountDTO);
-
-        AccountRest accountRest = accountController.createAccount(accountDetailsRequestModel, accountId);
-
-        assertNotNull(accountRest);
-        assertEquals(accountRest.getName(), accountDTO.getName());
-        assertEquals(accountRest.getType(), accountDTO.getType());
-        assertEquals(accountRest.getCustomer().getCustomerId(), accountDTO.getCustomer().getCustomerId());
-
-    }
+//    @Test
+//    void createAccount() {
+//        when(accountService.addAccount(any(AccountDTO.class), anyString())).thenReturn(accountDTO);
+//
+//        AccountRest accountRest = accountController.createAccount(accountDetailsRequestModel, accountId);
+//
+//        assertNotNull(accountRest);
+//        assertEquals(accountRest.getName(), accountDTO.getName());
+//        assertEquals(accountRest.getType(), accountDTO.getType());
+//        assertEquals(accountRest.getCustomer().getCustomerId(), accountDTO.getCustomer().getCustomerId());
+//
+//    }
 
     @Test
     void updateAccount() {

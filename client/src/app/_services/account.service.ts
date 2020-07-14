@@ -27,7 +27,7 @@ export class AccountService {
   }
 
   getAccountById(accountId: string): Observable<any> {
-    return this.http.get<Account>(this.API_URL + `/accounts/${accountId}`, { observe: "response" });
+    return this.http.get<Account>(this.API_URL + `/accounts/account/${accountId}`, { observe: "response" });
   }
 
   updateAccount(accountId: string, account: Account): Observable<any> {
