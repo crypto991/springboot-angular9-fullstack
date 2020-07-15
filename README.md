@@ -45,4 +45,4 @@ credentials:
     password: 123456
 ```
 
-Spring REST API AWS URL : http://restapitest-env.eba-gmpkzu72.eu-central-1.elasticbeanstalk.com/
+Spring REST API AWS URL : http://restapitest.eu-central-1.elasticbeanstalk.com
